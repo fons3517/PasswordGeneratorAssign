@@ -13,9 +13,9 @@ var userChoice = [ "OK", "CANCEL"];
 function generatePassword() {
 
   // Creating condition for promptLength prompt box (length of password)
-  var promptLength = parseInt(prompt("Password must be between 8 and 128 characters. Please make a valid entry"));
+  var promptLength = parseInt(prompt("Password must be between 8 and 128 characters. Please make a valid entry: "));
   if (promptLength < 8 || promptLength > 128) {
-    return "Please enter valid length";
+    return "Please enter valid password character length!";
   } else if(promptLength > 7 && promptLength < 129) {
 
     // Creating confirm prompts and conditions
@@ -26,7 +26,7 @@ function generatePassword() {
 
     // Creating logic conditions for inclusions and exclusions of character options
     if (!prompt2 && !prompt3 && !prompt4 && !prompt5) {
-      return "That is not a valid option. User must choose from at least one of the fields. Please try again.";
+      return "That is not a valid option! User must choose from at least one of the fields. Please try again.";
     } else {
 
       // Concatonating valid entries from users' choice for each prompt to randomly generated password
@@ -64,7 +64,7 @@ function generatePassword() {
 
 
   }else{
-    return "Invalid entry";
+    return "Invalid entry! Your input does not match the needed criteria.";
   }
 };
 
