@@ -12,7 +12,7 @@ var userChoice = [ "OK", "CANCEL"];
 // Create password function 
 function generatePassword() {
 
-  // Creating condition for promptLength prompt box
+  // Creating condition for promptLength prompt box (length of password)
   var promptLength = parseInt(prompt("Password must be between 8 and 128 characters. Please make a valid entry"));
   if (promptLength < 8 || promptLength > 128) {
     return "Please enter valid length";
@@ -20,29 +20,30 @@ function generatePassword() {
 
     // Creating confirm prompts and conditions
     var prompt2 = confirm("Would you like to include uppercase letters?");
-    var prompt3 = confirm("would you like to include special characters?");
-    var prompt4 = confirm("would you like to include lowercase characters?");
+    var prompt3 = confirm("would you like to include lowercase letters?");
+    var prompt4 = confirm("would you like to include special characters?");
     var prompt5 = confirm("Would you like to include numbers?");
 
     // Creating logic conditions for inclusions and exclusions of character options
     if (!prompt2 && !prompt3 && !prompt4 && !prompt5) {
       return "That is not a valid option. User must choose from at least one of the fields. Please try again.";
     } else {
-      var validEntry = []
-      if (prompt2) {
 
-        // Concatonating valid entries from users' choice for each prompt to randomly generated password
+      // Concatonating valid entries from users' choice for each prompt to randomly generated password
+      var validEntry = [];
+      if (prompt2) {
         validEntry += upperCase;
       }
       if (prompt3) {
-        validEntry += specialCharacters;
+        validEntry += lowerCase;
       }
       if (prompt4) {
-        validEntry += lowerCase;
+        validEntry += specialCharacters;
       }
       if (prompt5) {
         validEntry += numbers;
       }
+      // Logging new concatonated validEntry array to the console
       console.log(validEntry);
 
       // Creating empty string for password variable; making for() loop, using Math.floor and Math.random for generating random character selections from each "string"
@@ -50,7 +51,7 @@ function generatePassword() {
       for (var i = 0; i < promptLength; i++) {
         var index = Math.floor(Math.random() * validEntry.length)
         console.log(index, validEntry[index]);
-        password += validEntry[index]
+        password += validEntry[index];
       }
       // Logging password and returning it to the screen.
       console.log(password);
