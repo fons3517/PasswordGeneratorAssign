@@ -6,7 +6,7 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYX";
 var numbers = "0123456789";
 var specialCharacters = "!@#$%^&*()";
-var userChoice = ["Y", "N", "OK", "CANCEL"];
+var userChoice = [ "OK", "CANCEL"];
 
 
 // Create prompt functions 
@@ -15,7 +15,7 @@ function generatePassword() {
   var promptLength = parseInt(prompt("Password must be between 8 and 128 characters"));
   if (promptLength < 8 || promptLength > 128) {
     return "Please enter valid length";
-  } else {
+  } else if(promptLength > 7 && promptLength < 129) {
 
     // Creating function to select choice
     var prompt2 = confirm("Would you like to include uppercase letters? Y or N");
@@ -46,6 +46,7 @@ function generatePassword() {
         password += validEntry[index]
       }
       console.log(password);
+      return password;
     }
 
 
@@ -53,6 +54,8 @@ function generatePassword() {
 
 
 
+  }else{
+    return "Invalid entry";
   }
 };
 
