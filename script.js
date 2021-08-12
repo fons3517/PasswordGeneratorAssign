@@ -11,47 +11,49 @@ var userChoice = ["Y", "N", "OK", "CANCEL"];
 
 // Create prompt functions 
 function generatePassword() {
-   
-    var promptLength = parseInt( prompt("Password must be between 8 and 128 characters"));
-    if(promptLength < 8 || promptLength > 128) {
-      return "Please enter valid length";
-    } else{
+
+  var promptLength = parseInt(prompt("Password must be between 8 and 128 characters"));
+  if (promptLength < 8 || promptLength > 128) {
+    return "Please enter valid length";
+  } else {
 
     // Creating function to select choice
     var prompt2 = confirm("Would you like to include uppercase letters? Y or N");
     var prompt3 = confirm("would you like to include special characters as well?");
     var prompt4 = confirm("would you like to include lowercase characters as well?");
     var prompt5 = confirm("Would you like to also include numbers?");
-    if(!prompt2 && !prompt3 && !prompt4 && !prompt5) {
+    if (!prompt2 && !prompt3 && !prompt4 && !prompt5) {
       return "Please make a selection";
-    } else{
+    } else {
       var validEntry = []
-      if(prompt2) {
-        validEntry +=upperCase;
+      if (prompt2) {
+        validEntry += upperCase;
       }
-      if(prompt3) {
-        validEntry +=specialCharacters;
+      if (prompt3) {
+        validEntry += specialCharacters;
       }
-      if(prompt4) {
-        validEntry +=lowerCase;
+      if (prompt4) {
+        validEntry += lowerCase;
       }
-      if(prompt5) {
-        validEntry +=numbers;
+      if (prompt5) {
+        validEntry += numbers;
       }
       console.log(validEntry);
       var password = "";
-      
-      var index = Math.floor( Math.random()* validEntry.length)
+      for (var i = 0; i < promptLength; i++) {
+        var index = Math.floor(Math.random() * validEntry.length)
+        console.log(index, validEntry[index]);
+      }
 
-      console.log(index, validEntry[index]);
     }
-    
 
 
-    
 
 
-}};
+
+
+  }
+};
 
 
 // Write password to the #password input
