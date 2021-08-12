@@ -9,19 +9,20 @@ var specialCharacters = "!@#$%^&*()";
 var userChoice = [ "OK", "CANCEL"];
 
 
-// Create prompt functions 
+// Create password function 
 function generatePassword() {
 
-  var promptLength = parseInt(prompt("Password must be between 8 and 128 characters"));
+  //Creating condition for promptLength prompt box
+  var promptLength = parseInt(prompt("Password must be between 8 and 128 characters. Please make a valid entry"));
   if (promptLength < 8 || promptLength > 128) {
     return "Please enter valid length";
   } else if(promptLength > 7 && promptLength < 129) {
 
-    // Creating function to select choice
-    var prompt2 = confirm("Would you like to include uppercase letters? Y or N");
-    var prompt3 = confirm("would you like to include special characters as well?");
-    var prompt4 = confirm("would you like to include lowercase characters as well?");
-    var prompt5 = confirm("Would you like to also include numbers?");
+    // Creating confirm prompts and conditions
+    var prompt2 = confirm("Would you like to include uppercase letters?");
+    var prompt3 = confirm("would you like to include special characters?");
+    var prompt4 = confirm("would you like to include lowercase characters?");
+    var prompt5 = confirm("Would you like to include numbers?");
     if (!prompt2 && !prompt3 && !prompt4 && !prompt5) {
       return "Please make a selection";
     } else {
