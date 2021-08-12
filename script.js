@@ -39,6 +39,9 @@ function generatePassword() {
         validEntry +=numbers;
       }
       console.log(validEntry);
+      var password = "";
+      var index = Math.random()* validEntry.length
+      console.log(index);
     }
     
 
