@@ -43,8 +43,9 @@ function generatePassword() {
       for (var i = 0; i < promptLength; i++) {
         var index = Math.floor(Math.random() * validEntry.length)
         console.log(index, validEntry[index]);
+        password += validEntry[index]
       }
-
+      console.log(password);
     }
 
 
