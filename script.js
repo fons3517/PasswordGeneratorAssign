@@ -40,8 +40,10 @@ function generatePassword() {
       }
       console.log(validEntry);
       var password = "";
-      var index = Math.random()* validEntry.length
-      console.log(index);
+      
+      var index = Math.floor( Math.random()* validEntry.length)
+
+      console.log(index, validEntry[index]);
     }
     
 
