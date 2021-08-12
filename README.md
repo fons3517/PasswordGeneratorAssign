@@ -1,4 +1,4 @@
-# Homework Password Generator: 
+# Homework: Password Generator
 
 * Due date: 08/14/2021
 
@@ -15,3 +15,5 @@
 * [PasswordGeneratorAssign](https://fons3517.github.io/PasswordGeneratorAssign/)
 
 * ![Screenshot of live password generator site](PasswordGeneratorAssign..JPG)
+
+** Alfonso Robles 08/12/2021
