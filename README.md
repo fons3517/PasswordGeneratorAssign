@@ -16,4 +16,4 @@
 
 * ![Screenshot of live password generator site](PasswordGeneratorAssign..JPG)
 
-** Alfonso Robles 08/12/2021
+**Alfonso Robles 08/12/2021**

@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Assign letters and numbers to variable
+// Assign letters and numbers to variable (Password criteria)
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYX";
 var numbers = "0123456789";
@@ -13,7 +13,7 @@ var userChoice = [ "OK", "CANCEL"];
 function generatePassword() {
 
   // Creating condition for promptLength prompt box (length of password)
-  var promptLength = parseInt(prompt("Password must be between 8 and 128 characters. Please make a valid entry: "));
+  var promptLength = prompt("Password must be between 8 and 128 characters. Please make a valid entry: ");
   if (promptLength < 8 || promptLength > 128) {
     return "Please enter valid password character length!";
   } else if(promptLength > 7 && promptLength < 129) {
@@ -63,7 +63,7 @@ function generatePassword() {
 
 
 
-  }else{
+  } else{
     return "Invalid entry! Your input does not match the needed criteria.";
   }
 };
@@ -80,4 +80,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-//passwordCriteria();
