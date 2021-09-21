@@ -12,8 +12,10 @@
 
 ### Link to deployed site; Screenshot of up-to-date site;
 
-* [PasswordGeneratorAssign](https://fons3517.github.io/PasswordGeneratorAssign/)
+[PasswordGeneratorAssign](https://fons3517.github.io/PasswordGeneratorAssign/)
+![Screenshot of live password generator site](PasswordGeneratorAssign..JPG)
+![Screenshot 2](/PasswordGeneratorAssign2.JPG)
+![Screenshot 3](/PasswordGeneratorAssign3.JPG)
 
-* ![Screenshot of live password generator site](PasswordGeneratorAssign..JPG)
 
 **Alfonso Robles 08/12/2021**
