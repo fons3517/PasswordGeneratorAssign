@@ -6,17 +6,17 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYX";
 var numbers = "0123456789";
 var specialCharacters = "!@#$%^&*()";
-var userChoice = [ "OK", "CANCEL"];
+var userChoice = ["OK", "CANCEL"];
 
 
 // Create password function 
 function generatePassword() {
 
   // Creating condition for promptLength prompt box (length of password)
-  var promptLength = prompt("Password must be between 8 and 128 characters. Please make a valid entry: ");
-  if (promptLength < 8 || promptLength > 128) {
+  var passwordLength = prompt("Password must be between 8 and 128 characters. Please make a valid entry: ");
+  if (passwordLength < 8 || passwordLength > 128) {
     return "Please enter valid password character length!";
-  } else if(promptLength > 7 && promptLength < 129) {
+  } else if (passwordLength > 7 && passwordLength < 129) {
 
     // Creating confirm prompts and conditions
     var prompt2 = confirm("Would you like to include uppercase letters?");
@@ -48,7 +48,7 @@ function generatePassword() {
 
       // Creating empty string for password variable; making for() loop, using Math.floor and Math.random for generating random character selections from each "string"
       var password = "";
-      for (var i = 0; i < promptLength; i++) {
+      for (var i = 0; i < passwordLength; i++) {
         var index = Math.floor(Math.random() * validEntry.length)
         console.log(index, validEntry[index]);
         password += validEntry[index];
@@ -63,7 +63,7 @@ function generatePassword() {
 
 
 
-  } else{
+  } else {
     return "Invalid entry! Your input does not match the needed criteria.";
   }
 };
